@@ -4,9 +4,8 @@ SingleTon Pattern 是一種Creational Patterns（創建型模式），它可以�
 
 ------------
 ####範例
-
-**Singleton.cs**
 這邊可以看到Singleton的建構子方法是private，避免其他人使用new 方法去建立出這個物件，並且lock(object)來確保同時只有一條thread可以建立instance。
+**Singleton.cs**
 ```
 class Singleton
   {
@@ -39,7 +38,9 @@ class Singleton
     }
 ```
 
-**Demo.cs**
+如果在實際結果印出來，兩個值是相通的表示，物件只被建立過一次
+
+**單執行緒Demo.cs**
 ```
   class Demo
     {
@@ -52,4 +53,24 @@ class Singleton
         }
     }
 ```
-
+**多執行緒Demo.cs**
+```
+ class Demo
+    {
+        static void Main(string[] args)
+        {
+            Thread newThread1 = new Thread(()=> {
+                Singleton singleton = Singleton.GetInstance("InstanceFirst");
+                Console.WriteLine(singleton.myValue);
+            });
+            Thread newThread2 = new Thread(() => {
+                Singleton anotherSingleton = Singleton.GetInstance("InstanceSecond");
+                Console.WriteLine(anotherSingleton.myValue);
+            });
+            newThread1.Start();
+            newThread2.Start();
+            newThread1.Join();
+            newThread2.Join();
+        }
+    }
+```

@@ -4,6 +4,7 @@ SingleTon Pattern 是一種Creational Patterns（創建型模式），它可以�
 
 ------------
 ####範例
+
 **Singleton.cs**
 ```
 class Singleton
@@ -20,7 +21,7 @@ class Singleton
             {
             // 給一個lock鎖來判斷
 		    // 當要存取同一個值時藉由此lock來判斷有無存取值的權限
-                lock (_lock) 
+                lock (_lock)
                 {
                     if (_instance == null)
                     {
@@ -35,5 +36,20 @@ class Singleton
 
         public string myValue { get; set; }
     }
+```
+
+**Demo.cs**
+```
+class Demo
+{
+ static void Main(string[] args)
+ {
+        Singleton singleton = Singleton.GetInstance("InstanceFirst");
+        Singleton anotherSingleton = Singleton.GetInstance("InstanceSecond");
+        Console.WriteLine(singleton.myValue);
+        Console.WriteLine(anotherSingleton.myValue);
+ }
+
+}
 ```
 

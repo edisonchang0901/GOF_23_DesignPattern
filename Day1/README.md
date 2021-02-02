@@ -6,6 +6,7 @@ SingleTon Pattern 是一種Creational Patterns（創建型模式），它可以�
 ####範例
 
 **Singleton.cs**
+這邊可以看到Singleton的建構子方法是private，避免其他人使用new 方法去建立出這個物件，並且lock(object)來確保同時只有一條thread可以建立instance。
 ```
 class Singleton
   {
@@ -40,16 +41,15 @@ class Singleton
 
 **Demo.cs**
 ```
-class Demo
-{
- static void Main(string[] args)
- {
-        Singleton singleton = Singleton.GetInstance("InstanceFirst");
-        Singleton anotherSingleton = Singleton.GetInstance("InstanceSecond");
-        Console.WriteLine(singleton.myValue);
-        Console.WriteLine(anotherSingleton.myValue);
- }
-
-}
+  class Demo
+    {
+        static void Main(string[] args)
+        {
+            Singleton singleton = Singleton.GetInstance("InstanceFirst");
+            Singleton anotherSingleton = Singleton.GetInstance("InstanceSecond");
+            Console.WriteLine(singleton.myValue);
+            Console.WriteLine(anotherSingleton.myValue);
+        }
+    }
 ```
 

@@ -1,10 +1,12 @@
 ## Day1 GOF_23_DesignPattern-Builder
 ------------
 ####介紹
+<br />
 SingleTon Pattern 是一種Creational Patterns（創建型模式），它可以讓你用一步一步的流程去建立一個複雜的物件，並藉由Director去操作Builder介面來建構物件並且將Builder建構物件的建立流程封裝起來，User只要直接呼叫便可取得建立好的物件；也可不用Director操作，直接用Builder裡的方法將物件建出來並取得。
 
 
 ####範例
+<br />
 這邊先宣告要建立的product，這邊想到之前寫連接DB時的連線資訊，就是用Builder這個pattern來建立你所想要連接的DB資訊，所以這邊我宣告了Database這個class當作我要建的production
 **Database.cs**
 ```

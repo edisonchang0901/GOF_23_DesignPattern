@@ -23,10 +23,10 @@ namespace GOF_DesignPattern.Day2
         public void constructSportsCar(MssqlDbBuilder builder)
         {
             builder.reset();
-            builder.setDataSource("ming-stock.database.windows.net");
-            builder.setInitialCatalog("stock_AllPrice");
-            builder.setUserID("adming");
-            builder.setPassword("Sao015207");
+            builder.setDataSource();
+            builder.setInitialCatalog();
+            builder.setUserID();
+            builder.setPassword();
         }
 
     }

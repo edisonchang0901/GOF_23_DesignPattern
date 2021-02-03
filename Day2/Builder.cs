@@ -8,41 +8,45 @@ namespace GOF_DesignPattern.Day2
     interface Builder
     {
         public void reset();
-        public void setDataSource(string s);
-        public void setUserID(string s);
-        public void setPassword(string s);
-        public void setInitialCatalog(string s);
+        public void setDataSource();
+        public void setUserID();
+        public void setPassword();
+        public void setInitialCatalog();
     }
     
     public class MssqlDbBuilder : Builder
     {
-        private MSsql DB;
+        private Database DB;
+        private string DataSource = "ming-stock.database.windows.net";
+        private string InitialCatalog = "stock_AllPrice";
+        private string UserID = "adming";
+        private string Password = "Sao015207";
         public MssqlDbBuilder()
         {
             this.reset();
         }
         public void reset()
         {
-            this.DB = new MSsql();
+            this.DB = new Database();
         }
-        public void setDataSource(string s)
+        public void setDataSource()
         {
-            this.DB.DataSource = s;
-        }
-
-        public void setUserID(string s)
-        {
-            this.DB.UserID = s;
+            this.DB.DataSource = DataSource;
         }
 
-        public void setPassword(string s)
+        public void setUserID()
         {
-            this.DB.Password = s;
+            this.DB.UserID = UserID;
         }
 
-        public void setInitialCatalog(string s)
+        public void setPassword()
         {
-            this.DB.InitialCatalog = s;
+            this.DB.Password = Password;
+        }
+
+        public void setInitialCatalog()
+        {
+            this.DB.InitialCatalog = InitialCatalog;
         }
 
         public string getConnectString()

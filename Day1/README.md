@@ -1,9 +1,11 @@
 ## Day1 GOF_23_DesignPattern-Singleton
 ####介紹
+<br />
 SingleTon Pattern 是一種Creational Patterns（創建型模式），它可以讓你確保要被建立出來的物件是唯一的，並且用一個靜態方法去當作一個取得物件的方法。
 
 ------------
 ####範例
+<br />
 這邊可以看到Singleton的建構子方法是private，避免其他人使用new 方法去建立出這個物件，並且lock(object)來確保同時只有一條thread可以建立instance。
 **Singleton.cs**
 ```

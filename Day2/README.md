@@ -8,6 +8,7 @@ SingleTon Pattern ¬O¤@ºØCreational Patterns¡]³Ð«Ø«¬¼Ò¦¡¡^¡A¥¦¥i¥HÅý§A¥Î¤@¨B¤@¨Bª
 ####½d¨Ò
 <br />
 ³oÃä¥ý«Å§i­n«Ø¥ßªºproduct¡A³oÃä·Q¨ì¤§«e¼g³s±µDB®Éªº³s½u¸ê°T¡A´N¬O¥ÎBuilder³o­Ópattern¨Ó«Ø¥ß§A©Ò·Q­n³s±µªºDB¸ê°T¡A©Ò¥H³oÃä§Ú«Å§i¤FDatabase³o­Óclass·í§@§Ú­n«Øªºproduction
+<br />
 **Database.cs**
 ```
   class Database
@@ -19,6 +20,7 @@ SingleTon Pattern ¬O¤@ºØCreational Patterns¡]³Ð«Ø«¬¼Ò¦¡¡^¡A¥¦¥i¥HÅý§A¥Î¤@¨B¤@¨Bª
     }
 ```
 ¥ý±NBuilderªºinterface¤Uªº¤èªk©w¸q¥X¨Ó¡A¨ÓÅý¨ä¥L¤£¦PªºBuilder¥h¹ê§@®É¡A¥i¥H®Ú¾Ú¤£¦P¤º®e¥h¹ê§@©³¤Uªº¤èªk¡A¦]¬°¨C­ÓDBªº³s½u¸ê°T¤£ºÉ¬Û¦P¡A©Ò¥H¤U­±¥ý±N³]©w¸ê®Æ³s½uÄÝ©Êªº¤èªk©w¸q¥X¨Ó¡C
+<br />
 **Builder.cs**
 ```
  interface Builder
@@ -31,6 +33,7 @@ SingleTon Pattern ¬O¤@ºØCreational Patterns¡]³Ð«Ø«¬¼Ò¦¡¡^¡A¥¦¥i¥HÅý§A¥Î¤@¨B¤@¨Bª
     }
 ```
 ¦b¨Ì¾Ú¤£¦PªºDB¥h¹ê§@¹êÅéBuilder¡A¨Ã¥h¹ê²{MssqlDbBuilder³s½u¸ê°Tªº¦U¦¡³]©w
+<br />
 **MssqlDbBuilder Implements Builder**
 ```
  public class MssqlDbBuilder : Builder
@@ -77,6 +80,7 @@ SingleTon Pattern ¬O¤@ºØCreational Patterns¡]³Ð«Ø«¬¼Ò¦¡¡^¡A¥¦¥i¥HÅý§A¥Î¤@¨B¤@¨Bª
     }
 ```
  «Ø¥ßDirectorÅý¥¦©I¥sMssqlDbBuilder¨Ó¹ê»Ú¥h¦w±Æ¸Ó½ÆÂøª«¥ó­n¦³¬Æ»ò³¡¤À»Ý­n«Ø¥ß
+ <br />
 **Director**
 ```
 class Director

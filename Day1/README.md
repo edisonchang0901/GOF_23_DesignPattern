@@ -2,7 +2,7 @@
 ####介紹
 <br />
 SingleTon Pattern 是一種Creational Patterns（創建型模式），它可以讓你確保要被建立出來的物件是唯一的，並且用一個靜態方法去當作一個取得物件的方法。
-http://34.80.69.8:3000/d/jorGkQY7k/xi-tong-overview-da-ying-mu-shi-yong?orgId=1&refresh=30s&kiosk=tv&from=now-5m&to=now
+
 ------------
 ####範例
 <br />
